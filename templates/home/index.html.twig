@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}-Accueil{% endblock %}
+
+{% block body %}
+<main class="container">
+    <div class="row">
+
+        <div class="col-md-8">
+            <h3 classe="pb-4 mb-4 fst-italic borer-bottom">Artciles recents</h3>
+            <div id="article-list" >
+                {% include 'articles/list.html.twig' with { articles } %}
+            </div>
+
+        </div>
+
+        <div class="col-md-4">
+            <div class="position-sticky" style="top: 2rem;">
+                {% include 'widget/about.html.twig' %}
+            </div> 
+
+        </div>
+
+    </div>
+</main>
+{% endblock %}
